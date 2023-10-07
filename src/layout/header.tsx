@@ -2,12 +2,15 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiSolidUser } from 'react-icons/bi';
+import logo from '@/assets/logo_e.png';
 
 const Header = () => {
   return (
     <HeaderBox>
       <TextContent>
-        <StyledLink to="/">로고</StyledLink>
+        <StyledLink to="/">
+          <img src={logo} alt="logo" />
+        </StyledLink>
         <InputBox>
           <StyledInput placeholder="키워드를 입력하세요" type="text" />
           <AiOutlineSearch />
@@ -26,7 +29,7 @@ const HeaderBox = styled.div`
   height: 113px; */
   /* width: 1920px; */
   width: 100%;
-  height: 120px;
+  height: 160px;
   margin: 0 auto;
   /* margin-top: 10px;
   margin-bottom: 10px; */
@@ -47,13 +50,12 @@ const TextContent = styled.li`
   font-weight: 900;
   line-height: 160%; /* 32px */
 
-  margin: 10px 50px;
+  margin: 10px 0px;
   width: 100%;
   list-style: none;
   padding: 5px;
   display: flex;
   justify-content: space-around;
-
   position: relative;
 
   color: #000;
@@ -85,7 +87,7 @@ const InputBox = styled.div`
 `;
 
 const StyledInput = styled.input`
-  width: 700px;
+  width: 900px;
   height: 72px;
   flex-shrink: 0;
   border-radius: 25px;

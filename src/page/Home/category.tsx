@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-const Category = ({ title }: { title: string }) => {
+const Category = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   const tagData = [
@@ -29,12 +29,6 @@ const Category = ({ title }: { title: string }) => {
 
   return (
     <CategoryContainer>
-      <CategoryTitle>{title}</CategoryTitle>
-      <SecondCategory>
-        <SecondText>지역</SecondText>
-        <SecondText>요일/시간대</SecondText>
-        <SecondText style={{ color: 'var(--color-main2)' }}>활동</SecondText>
-      </SecondCategory>
       <TagContainer>
         {tagData &&
           tagData.map((item, index) => {
@@ -58,59 +52,16 @@ const CategoryContainer = styled.div`
   /* border: 1px solid red; */
   flex-direction: column;
   flex-shrink: 0;
-`;
-
-const CategoryTitle = styled.div`
-  color: #000;
-
-  /* Headline 1 */
-  font-family: Pretendard;
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 64.8px */
-
-  display: flex;
-  width: 1920px;
-  height: 200px;
-  padding: 100px 1381px 35px 140px;
-  align-items: center;
-`;
-
-const SecondCategory = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 0;
-  /* border-bottom: 0.2px solid var(--L_Grey, #89939e); */
-  background: var(--White, #fff);
-  /* display: inline-flex; */
-  display: flex;
-  align-items: center;
-  gap: 80px;
-  padding: 80px 1381px 80px 140px;
-  /* padding: 80px 0px; */
-`;
-
-const SecondText = styled.div`
-  color: var(--Grey, #717171);
-  text-align: center;
-  font-family: Pretendard;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 48px */
-
-  &:hover {
-    color: var(--color-main2);
-    cursor: pointer;
-  }
+  justify-content: center;
 `;
 
 const TagContainer = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  padding: 100px 1381px 35px 140px;
+  margin: 100px 0px;
+  /* padding: 100px 40px; */
+  /* padding: 100px 1381px 35px 140px; */
 `;
 
 const TagButton = styled.div<{ $isSelected: boolean }>`

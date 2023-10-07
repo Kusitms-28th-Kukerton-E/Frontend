@@ -1,11 +1,7 @@
-import History from '../mypage/History';
+import { Navigate } from 'react-router';
 
 const Home = () => {
-  return (
-    <div>
-      <History />
-    </div>
-  );
+  return <Navigate to="/login" replace />;
 };
 
 export default Home;

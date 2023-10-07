@@ -1,6 +1,7 @@
 import { LikeButton, MainButton2, SubButton2 } from '@/components/button';
 import { Hl2 } from '@/style/common';
 import { VolunteerType } from '@/types';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Volunteer = ({ mode, item }: { mode: string; item: VolunteerType }) => {
@@ -41,7 +42,9 @@ const ButtonContainer2 = () => {
   return (
     <ButtonContainer>
       <MainButton2>
-        <Hl2>평가하기</Hl2>
+        <Link to="/write">
+          <Hl2>평가하기</Hl2>
+        </Link>
       </MainButton2>
     </ButtonContainer>
   );

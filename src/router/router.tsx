@@ -1,5 +1,4 @@
 import Layout from '@/layout/layout';
-import Home from '@/page/Home';
 import Login from '@/page/Login';
 import Register from '@/page/Register';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -10,6 +9,7 @@ import VolunteerMyPage from '@/page/mypage/VolunteerMyPage';
 import OrganizationMyPage from '@/page/mypage/OrganizationMyPage';
 import KidMyPage from '@/page/mypage/KidMyPage';
 import Write from '@/page/Write';
+import Home from '@/page/Home';
 
 export const Router = () => {
   return (

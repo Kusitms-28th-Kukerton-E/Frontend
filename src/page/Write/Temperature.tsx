@@ -34,7 +34,7 @@ const Container = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 45px;
   flex-wrap: wrap;
 `;
 
@@ -43,7 +43,7 @@ const Button = styled.button`
   font-weight: 600;
   font-size: 32px;
   line-height: 1.2;
-  padding: 29px 50px;
+  padding: 29px 60px;
   background-color: var(--color-white);
   border: 3px solid;
   border-color: var(--color-gray-blue);

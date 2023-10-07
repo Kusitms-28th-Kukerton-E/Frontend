@@ -63,7 +63,6 @@ const Login = () => {
           <Hl2>로그인하기</Hl2>
         </MainButton>
       </form>
-      {/* TODO: 신규 회원가입 버튼 클릭 시 회원가입 화면으로 이동 */}
       <Link to="/register">
         <SubButton>
           <Hl2>신규 회원가입</Hl2>

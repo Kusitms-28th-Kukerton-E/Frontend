@@ -1,13 +1,21 @@
 import styled from 'styled-components';
 import TopCate from '../TopCate';
+import Children from '../Organization/Children';
 
 const Main2 = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+      }}
+    >
       <VolContainer>
         {' '}
         <TopCate title="공고에 올린 자원봉사" />
       </VolContainer>
+      <Children />
     </div>
   );
 };

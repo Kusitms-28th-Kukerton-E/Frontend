@@ -9,6 +9,7 @@ export interface ChildType {
   name: string;
   region: string;
   organization: string;
+  image: string;
 }
 export interface ChildrenDataType {
   child: ChildType;

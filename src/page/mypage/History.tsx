@@ -1,11 +1,11 @@
-import { MainButton2 } from '@/components/button';
 import { BiSolidLeftArrow, BiSolidRightArrow } from 'react-icons/bi';
 import styled from 'styled-components';
+import SubTitle from './subTitle';
 
 const History = () => {
   return (
     <Container>
-      <div>봉사내역</div>
+      <SubTitle title="내 봉사 내역"></SubTitle>
       <Table>
         <thead>
           <tr>
@@ -27,9 +27,9 @@ const History = () => {
             <td width="10%">2</td>
             <td width="5%"></td>
             <td width="10%">
-              <MainButton2>
+              <MainButton>
                 <span>리뷰쓰기</span>
-              </MainButton2>
+              </MainButton>
             </td>
           </tr>
         </tbody>
@@ -48,18 +48,19 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
 `;
 
 const Table = styled.table`
   font-family: Pretendard;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 30px;
   line-height: 1.5;
   text-align: center;
 
   th {
-    padding: 10px 0px;
+    padding: 40px 0px;
+    font-weight: 600;
   }
 
   tbody {
@@ -77,7 +78,7 @@ const Table = styled.table`
   span {
     font-family: Pretendard;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 30px;
   }
 `;
 
@@ -85,7 +86,7 @@ const Page = styled.div`
   font-family: Pretendard;
   font-weight: 600;
   font-size: 30px;
-  padding: 50px 0px;
+  padding: 60px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -93,6 +94,14 @@ const Page = styled.div`
   span {
     padding: 0px 15px;
   }
+`;
+
+export const MainButton = styled.button`
+  border-radius: 60px;
+  border: none;
+  background: var(--color-main2);
+  color: var(--color-white);
+  padding: 20px 48px;
 `;
 
 export default History;

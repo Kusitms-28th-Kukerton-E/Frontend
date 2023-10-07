@@ -9,6 +9,7 @@ import Teacher from '@/page/Home/teacher';
 import VolunteerMyPage from '@/page/mypage/VolunteerMyPage';
 import OrganizationMyPage from '@/page/mypage/OrganizationMyPage';
 import KidMyPage from '@/page/mypage/KidMyPage';
+import Write from '@/page/Write';
 
 export const Router = () => {
   return (
@@ -34,6 +35,7 @@ export const Router = () => {
           <Route path="/mypage/volunteer" element={<VolunteerMyPage />} />
           <Route path="/mypage/organization" element={<OrganizationMyPage />} />
           <Route path="/mypage/kid" element={<KidMyPage />} />
+          <Route path="/write" element={<Write />} />
         </Route>
       </Routes>
     </BrowserRouter>

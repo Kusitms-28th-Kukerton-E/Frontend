@@ -82,8 +82,7 @@ const DataTag = styled.div`
   align-items: flex-start;
   border-radius: 40px;
   border: 1px solid var(--Sub-color, #e0eaf3);
-  //
-  color: var(--Main-color2, #498dfd);
+  //color: var(--Main-color2, #498dfd);
 
   /* 본문2 */
   font-family: Pretendard;

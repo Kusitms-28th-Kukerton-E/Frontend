@@ -41,13 +41,17 @@ const OrganizationPage = () => {
 
 const MainContainer = styled.div`
   padding: 0px 112px;
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 `;
 
 const TitleContainer = styled.div`
   padding-top: 60px;
   padding-bottom: 15px;
-  padding-left: 28px;
+  width: 1900px;
 `;
 
 const BodyContainer = styled.div`

@@ -1,10 +1,11 @@
 import Login from '@/page/Login';
+import Header from '@/layout/header';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
   return (
     <>
-      <Login />
+      <Header />
       <Outlet />
     </>
   );

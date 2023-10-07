@@ -3,6 +3,6 @@ import persistAtom from './persistAtom';
 
 export const roleState = atom<string>({
   key: 'roleState',
-  default: 'ROLE_Kid',
+  default: '',
   effects: [persistAtom],
 });

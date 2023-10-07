@@ -1,55 +1,94 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiSolidUser } from 'react-icons/bi';
 import logo from '@/assets/로고.png';
 import { useRecoilState } from 'recoil';
 import { roleState } from '@/state/roleState';
+import { Hl3 } from '@/style/common';
 
 const Header = () => {
-  const [role] = useRecoilState(roleState);
+  const [role, setRole] = useRecoilState(roleState);
+  const navigate = useNavigate();
   return (
     <HeaderBox>
       <TextContent>
-        {role === 'ROLE_Kid' && (
-          <StyledLink to="/main/kid">
-            <img src={logo} alt="logo" />
-          </StyledLink>
-        )}
-        {role === 'ROLE_Organization' && (
-          <StyledLink to="/main/organization">
-            <img src={logo} alt="logo" />
-          </StyledLink>
-        )}
-        {role === 'ROLE_Volunteer' && (
-          <StyledLink to="/main/volunteer">
-            <img src={logo} alt="logo" />
-          </StyledLink>
-        )}
+        <ImgContainer>
+          {role === 'ROLE_Kid' && (
+            <Link to="/main/kid">
+              <img src={logo} alt="logo" width="154px" />
+            </Link>
+          )}
+          {role === 'ROLE_Organization' && (
+            <Link to="/main/organization">
+              <img src={logo} alt="logo" width="154px" />
+            </Link>
+          )}
+          {role === 'ROLE_Volunteer' && (
+            <Link to="/main/volunteer">
+              <img src={logo} alt="logo" width="154px" />
+            </Link>
+          )}
+          {role === '' && <img src={logo} alt="logo" width="154px" />}
+        </ImgContainer>
         <InputBox>
           <StyledInput placeholder="키워드를 입력하세요" type="text" />
           <StyledIcon />
         </InputBox>
         {role === 'ROLE_Kid' && (
-          <StyledLink to="/mypage/kid">
-            <div className="user-container">
-              <BiSolidUser />
-            </div>
-          </StyledLink>
+          <div className="user-container">
+            <Button
+              onClick={() => {
+                setRole('');
+                alert('로그아웃 되었습니다.');
+                navigate('/login');
+              }}
+            >
+              <Hl3>로그아웃</Hl3>
+            </Button>
+            <Link to="/mypage/kid">
+              <BiSolidUser style={{ fontSize: '40px' }} />
+            </Link>
+          </div>
         )}
         {role === 'ROLE_Organization' && (
-          <StyledLink to="/mypage/organization">
-            <div className="user-container">
+          <div className="user-container">
+            <Button
+              onClick={() => {
+                setRole('');
+                alert('로그아웃 되었습니다.');
+                navigate('/login');
+              }}
+            >
+              <Hl3>로그아웃</Hl3>
+            </Button>
+            <Link to="/mypage/kid">
               <BiSolidUser />
-            </div>
-          </StyledLink>
+            </Link>
+          </div>
         )}
         {role === 'ROLE_Volunteer' && (
-          <StyledLink to="/mypage/volunteer">
+          <div className="user-container">
+            <Button
+              onClick={() => {
+                setRole('');
+                alert('로그아웃 되었습니다.');
+                navigate('/login');
+              }}
+            >
+              <Hl3>로그아웃</Hl3>
+            </Button>
+            <Link to="/mypage/kid">
+              <BiSolidUser />
+            </Link>
+          </div>
+        )}
+        {role === '' && (
+          <Link to="/mypage/volunteer">
             <div className="user-container">
               <BiSolidUser />
             </div>
-          </StyledLink>
+          </Link>
         )}
       </TextContent>
     </HeaderBox>
@@ -60,6 +99,21 @@ const StyledIcon = styled(AiOutlineSearch)`
   position: absolute;
   top: 25%;
   right: 3%;
+`;
+
+const ImgContainer = styled.div`
+  width: 280px;
+  display: flex;
+  justify-content: flex-start;
+`;
+
+const Button = styled.button`
+  border-radius: 60px;
+  border: none;
+  background: var(--color-main2);
+  color: var(--color-white);
+  padding: 20px 48px;
+  //width: 100%;
 `;
 
 const HeaderBox = styled.div`
@@ -104,18 +158,14 @@ const TextContent = styled.li`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-`;
-
-const StyledLink = styled(Link)`
-  img {
-    width: 160px;
-    height: 67.75px;
-  }
 
   .user-container {
-    width: 160px;
+    width: 280px;
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
+    gap: 30px;
+    align-items: center;
   }
 `;
 

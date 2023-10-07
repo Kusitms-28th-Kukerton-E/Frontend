@@ -1,17 +1,8 @@
 import styled from 'styled-components';
 import SubTitle from './subTitle';
+import { UserDataType } from '@/types';
 
-const MyInfo = () => {
-  //   const myTopInfo = [
-  //     {
-  //       name: '김준석',
-  //       gender: '남성',
-  //       age: '25',
-  //       place: 'seoul',
-  //       univ: 'ajou',
-  //       major: 'eng',
-  //     },
-  //   ];
+const MyInfo = ({ userData }: { userData: UserDataType }) => {
   return (
     <InfoContainer>
       <SubTitle title="내 정보"></SubTitle>
@@ -20,27 +11,27 @@ const MyInfo = () => {
           <InfoSmall>
             <NameBox>
               <InfoButton>이름</InfoButton>
-              <InfoText>김준석</InfoText>
+              <InfoText>{userData.name}</InfoText>
             </NameBox>
             <NameBox>
-              <InfoButton>이름</InfoButton>
-              <InfoText>김준석</InfoText>
+              <InfoButton>성별</InfoButton>
+              <InfoText>{userData.sex}</InfoText>
             </NameBox>
             <NameBox>
-              <InfoButton>이름</InfoButton>
-              <InfoText>김준석</InfoText>
+              <InfoButton>나이</InfoButton>
+              <InfoText>{userData.age}</InfoText>
             </NameBox>
             <NameBox>
-              <InfoButton>이름</InfoButton>
-              <InfoText>김준석</InfoText>
+              <InfoButton>지역</InfoButton>
+              <InfoText>{userData.place}</InfoText>
             </NameBox>
             <NameBox>
-              <InfoButton>이름</InfoButton>
-              <InfoText>김준석</InfoText>
+              <InfoButton>학교</InfoButton>
+              <InfoText>{userData.school}</InfoText>
             </NameBox>
             <NameBox>
-              <InfoButton>이름</InfoButton>
-              <InfoText>김준석</InfoText>
+              <InfoButton>전공</InfoButton>
+              <InfoText>{userData.major}</InfoText>
             </NameBox>
           </InfoSmall>
         </InfoTop>
@@ -49,16 +40,16 @@ const MyInfo = () => {
             <NameBox>
               <InfoButtonBottom>관심 과목</InfoButtonBottom>
               <InfoTextBottom>수학</InfoTextBottom>
-              <InfoTextBottom>수학</InfoTextBottom>
-              <InfoTextBottom>수학</InfoTextBottom>
+              <InfoTextBottom>국어</InfoTextBottom>
+              <InfoTextBottom>체육</InfoTextBottom>
             </NameBox>
             <NameBox>
-              <InfoButtonBottom>관심 과목</InfoButtonBottom>
-              <InfoText style={{ color: 'black' }}>김준석</InfoText>
+              <InfoButtonBottom>VMS ID</InfoButtonBottom>
+              <InfoText style={{ color: 'black' }}>{userData.vmsId1}</InfoText>
             </NameBox>
             <NameBox>
-              <InfoButtonBottom>관심 과목</InfoButtonBottom>
-              <InfoText style={{ color: 'black' }}>김준석</InfoText>
+              <InfoButtonBottom>VMS ID</InfoButtonBottom>
+              <InfoText style={{ color: 'black' }}>{userData.vmsId2}</InfoText>
             </NameBox>
           </InfoSmall>
         </InfoBottom>

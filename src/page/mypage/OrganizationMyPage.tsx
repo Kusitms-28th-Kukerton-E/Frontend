@@ -1,7 +1,7 @@
-import { UserDataType } from '@/types';
+// import { UserDataType } from '@/types';
 import History from './History';
 import Review from './review';
-import Temperature from './temperature';
+// import Temperature from './temperature';
 
 const OrganizationMyPage = () => {
   return (

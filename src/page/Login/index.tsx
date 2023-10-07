@@ -1,8 +1,11 @@
+import { login } from '@/api';
 import { MainButton, SubButton } from '@/components/button';
+import { roleState } from '@/state/roleState';
 import { Hl1, Hl2, Hl4 } from '@/style/common';
 import { LoginDataType } from '@/types';
 import { ChangeEvent, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
 import styled from 'styled-components';
 
 const Login = () => {
@@ -10,6 +13,18 @@ const Login = () => {
     id: '',
     password: '',
   });
+  const [, setRole] = useRecoilState(roleState);
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    login(loginData).then(data => {
+      const role = data.headers['role'];
+      setRole(role);
+      if (role === 'ROLE_Kid') navigate('/main/kid');
+      else if (role === 'ROLE_Organization') navigate('/main/organization');
+      else if (role === 'ROLE_Volunteer') navigate('/main/volunteer');
+    });
+  };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -19,8 +34,7 @@ const Login = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: 로그인 연동
-    console.log(loginData.id);
-    console.log(loginData.password);
+    handleLogin();
   };
 
   return (

@@ -15,7 +15,7 @@ const tempList = [
 const Temperature = () => {
   return (
     <Container>
-      <SubTitle title="온도" />
+      <SubTitle title="평가" />
       <ButtonContainer>
         {tempList.map(temp => (
           <Button key={temp}>{temp}</Button>

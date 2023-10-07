@@ -64,9 +64,13 @@ const SubInfo = styled.div`
   font-weight: 400;
   font-size: 26px;
   line-height: 1.5;
-  width: 879px;
+  width: 950px;
   display: flex;
   flex-direction: column;
+
+  .sub-description {
+    white-space: pre-line;
+  }
 `;
 
 export default Child;

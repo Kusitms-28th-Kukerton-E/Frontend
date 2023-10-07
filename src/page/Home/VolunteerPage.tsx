@@ -23,7 +23,13 @@ const VolunteerPage = ({ title }: { title: string }) => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '100px 0px',
+      }}
+    >
       <VolContainer>
         {/* <TopCate title="모집 중인 자원봉사" /> */}
         <CategoryContainer>

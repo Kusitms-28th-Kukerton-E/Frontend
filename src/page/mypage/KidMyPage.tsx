@@ -3,6 +3,7 @@ import ChildMyInfo from './child/childMyInfo';
 import { UserDataType } from '@/types';
 import axios from 'axios';
 import ChildReview from './childReview';
+import styled from 'styled-components';
 import ChildHistory from './child/childHistory';
 
 const KidMyPage = () => {
@@ -22,7 +23,7 @@ const KidMyPage = () => {
   }, []);
 
   return (
-    <>
+    <Container>
       {userData && <ChildMyInfo userData={userData} />}
       <ChildHistory />
       <ChildReview
@@ -30,8 +31,12 @@ const KidMyPage = () => {
         text2="선생님께 감사하는 마음으로 한 마디 감사 편지를 보내 주세요."
         configButton="편지쓰기"
       />
-    </>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  padding-bottom: 100px;
+`;
 
 export default KidMyPage;

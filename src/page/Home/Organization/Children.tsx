@@ -2,6 +2,8 @@ import { Hl1 } from '@/style/common';
 import styled from 'styled-components';
 import Child from './Child';
 import { ChildrenDataType } from '@/types';
+import Img1 from '@/assets/child/child_img_1.png';
+import Img2 from '@/assets/child/child_img_2.png';
 
 const childrenDataList: ChildrenDataType[] = [
   {
@@ -9,6 +11,7 @@ const childrenDataList: ChildrenDataType[] = [
       name: '김서영(11, 여성)',
       region: '서울특별시 구로구',
       organization: '은하초등학교 4학년',
+      image: Img1,
     },
     description:
       '베트남계 다문화 가정. 베트남어와 한국어를 모두 구사하며, 국어·영어 성적이 좋음.',
@@ -18,6 +21,7 @@ const childrenDataList: ChildrenDataType[] = [
       name: '김기범(16, 남성)',
       region: '서울특별시 금천구',
       organization: '혜성중학교 3학년',
+      image: Img2,
     },
     description:
       '저소득층 가정. 사교육을 일체 받지 않아 대부분의 과목 성적이 저조함. 국영수 중심으로 교과 학습 1대1 멘토링이 필요하지만 학습 동기 부여가 낮아적극적인 지도를 필요로 함. 스포츠 체험 활동에 관심이 많음.',

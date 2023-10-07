@@ -8,12 +8,15 @@ import Teacher from '@/page/Home/teacher';
 import VolunteerMyPage from '@/page/mypage/VolunteerMyPage';
 import OrganizationMyPage from '@/page/mypage/OrganizationMyPage';
 import KidMyPage from '@/page/mypage/KidMyPage';
+import Write from '@/page/Write';
+import Home from '@/page/Home';
 
 export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
@@ -32,6 +35,7 @@ export const Router = () => {
           <Route path="/mypage/volunteer" element={<VolunteerMyPage />} />
           <Route path="/mypage/organization" element={<OrganizationMyPage />} />
           <Route path="/mypage/kid" element={<KidMyPage />} />
+          <Route path="/write" element={<Write />} />
         </Route>
       </Routes>
     </BrowserRouter>

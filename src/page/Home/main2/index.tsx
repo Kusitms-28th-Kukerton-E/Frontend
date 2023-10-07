@@ -4,13 +4,14 @@ import TopCate from '../TopCate';
 import { getVolunteerList } from '@/api';
 import Volunteer from '../Volunteer';
 import { VolunteerType } from '@/types';
+import Children from '../Organization/Children';
 
 const Main2 = () => {
   const [volunteerList, setVolunteerList] = useState<VolunteerType[]>([]);
   const handleGetVolunteerList = async () => {
     getVolunteerList().then(data => setVolunteerList(data.data.data));
   };
-  const [ing, setIng] = useState(false);
+  const [ing, setIng] = useState(true);
   const [end, setEnd] = useState(false);
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const Main2 = () => {
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
+        padding: '100px 0px',
       }}
     >
       <VolContainer>
@@ -45,6 +47,7 @@ const Main2 = () => {
             />
           ))}
       </VolListContainer>
+      <Children />
     </div>
   );
 };

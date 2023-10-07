@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import VolunteerPage from '@/page/Home/VolunteerPage';
 import Main2 from '@/page/Home/main2';
 import Teacher from '@/page/Home/teacher';
+import MyPage from '@/page/mypage';
 
 export const Router = () => {
   return (
@@ -27,6 +28,8 @@ export const Router = () => {
             path="/main/teacher"
             element={<Teacher title="나와 함께할 선생님 살펴보기" />}
           />
+
+          <Route path="/mypage" element={<MyPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

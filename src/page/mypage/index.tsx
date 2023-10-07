@@ -1,3 +1,4 @@
+import ChildReview from './childReview';
 import MyInfo from './myInfo';
 import Review from './review';
 import Temperature from './temperature';
@@ -8,6 +9,7 @@ const MyPage = () => {
       <MyInfo />
       <Temperature />
       <Review />
+      <ChildReview />
     </>
   );
 };

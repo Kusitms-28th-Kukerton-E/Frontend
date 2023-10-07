@@ -5,6 +5,7 @@ import Review from './review';
 import Temperature from './temperature';
 import { UserDataType } from '@/types';
 import axios from 'axios';
+import styled from 'styled-components';
 
 const VolunteerMyPage = () => {
   const [userData, setUserData] = useState<UserDataType>();
@@ -26,14 +27,18 @@ const VolunteerMyPage = () => {
   }, []);
 
   return (
-    <>
+    <Container>
       {userData && <MyInfo userData={userData} title="내 정보" />}
       {userData && <Temperature userData={userData} />}
 
       <History />
       <Review />
-    </>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  padding-bottom: 100px 0px;
+`;
 
 export default VolunteerMyPage;

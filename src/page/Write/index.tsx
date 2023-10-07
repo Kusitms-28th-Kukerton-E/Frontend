@@ -3,6 +3,7 @@ import MyInfo from '../mypage/myInfo';
 import Temperature from './Temperature';
 import axios from 'axios';
 import { UserDataType } from '@/types';
+import styled from 'styled-components';
 
 const Write = () => {
   const [userData, setUserData] = useState<UserDataType>();
@@ -24,11 +25,15 @@ const Write = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
       {userData && <MyInfo userData={userData} title="봉사자 정보" />}
       <Temperature />
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  padding-bottom: 100px;
+`;
 
 export default Write;

@@ -20,7 +20,7 @@ const Teacher = ({ title }: { title: string }) => {
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
-        paddingBottom: '100px',
+        paddingBottom: '150px',
       }}
     >
       <VolContainer>

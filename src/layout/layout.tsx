@@ -4,6 +4,7 @@ import BannerOrg from '@/assets/banner/banner_organization.png';
 import BannerVol from '@/assets/banner/banner_volunteer.png';
 import BannerKid from '@/assets/banner/banner_kid.png';
 import BannerLog from '@/assets/banner/banner_login.png';
+import Footer from './footer';
 
 const Layout = () => {
   const { pathname } = useLocation();
@@ -26,6 +27,7 @@ const Layout = () => {
         <img src={BannerLog} alt={BannerLog} width="100%" />
       )}
       <Outlet />
+      <Footer />
     </>
   );
 };

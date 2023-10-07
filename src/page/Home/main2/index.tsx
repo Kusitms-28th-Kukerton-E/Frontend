@@ -24,6 +24,7 @@ const Main2 = () => {
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
+        padding: '100px 0px',
       }}
     >
       <VolContainer>

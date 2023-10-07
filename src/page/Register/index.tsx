@@ -16,6 +16,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 100px 0px;
 
   img {
     width: 140vw;

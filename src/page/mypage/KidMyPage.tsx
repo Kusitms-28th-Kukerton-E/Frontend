@@ -4,6 +4,7 @@ import ChildMyInfo from './child/childMyInfo';
 import { UserDataType } from '@/types';
 import axios from 'axios';
 import ChildReview from './childReview';
+import styled from 'styled-components';
 
 const KidMyPage = () => {
   const [userData, setUserData] = useState<UserDataType>();
@@ -24,12 +25,16 @@ const KidMyPage = () => {
   }, []);
 
   return (
-    <>
+    <Container>
       {userData && <ChildMyInfo userData={userData} />}
       <History />
       <ChildReview />
-    </>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  padding-bottom: 100px;
+`;
 
 export default KidMyPage;

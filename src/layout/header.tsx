@@ -28,27 +28,39 @@ const Header = () => {
         )}
         <InputBox>
           <StyledInput placeholder="키워드를 입력하세요" type="text" />
-          <AiOutlineSearch />
+          <StyledIcon />
         </InputBox>
         {role === 'ROLE_Kid' && (
           <StyledLink to="/mypage/kid">
-            <BiSolidUser />
+            <div className="user-container">
+              <BiSolidUser />
+            </div>
           </StyledLink>
         )}
         {role === 'ROLE_Organization' && (
           <StyledLink to="/mypage/organization">
-            <BiSolidUser />
+            <div className="user-container">
+              <BiSolidUser />
+            </div>
           </StyledLink>
         )}
         {role === 'ROLE_Volunteer' && (
           <StyledLink to="/mypage/volunteer">
-            <BiSolidUser />
+            <div className="user-container">
+              <BiSolidUser />
+            </div>
           </StyledLink>
         )}
       </TextContent>
     </HeaderBox>
   );
 };
+
+const StyledIcon = styled(AiOutlineSearch)`
+  position: absolute;
+  top: 25%;
+  right: 3%;
+`;
 
 const HeaderBox = styled.div`
   /* border: 1px solid gray; */
@@ -99,6 +111,12 @@ const StyledLink = styled(Link)`
     width: 160px;
     height: 67.75px;
   }
+
+  .user-container {
+    width: 160px;
+    display: flex;
+    justify-content: flex-end;
+  }
 `;
 
 // const SubStyledLink = styled(Link)`
@@ -116,6 +134,7 @@ const InputBox = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
+  position: relative;
 `;
 
 const StyledInput = styled.input`

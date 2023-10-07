@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
+import PRETENDARD from '../assets/PretendardVariable.woff2';
 export const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,6 +28,12 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    @font-face {
+        font-family: 'Pretendard';
+        src: url(${PRETENDARD}) format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
 }
 ol, ul {
     list-style: none;

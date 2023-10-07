@@ -1,75 +1,62 @@
-import { Hl2 } from '@/style/common';
-import { ChildrenDataType } from '@/types';
+import { Hl1 } from '@/style/common';
 import styled from 'styled-components';
+import Child from './Child';
+import { ChildrenDataType } from '@/types';
 
-const Children = ({ childData }: { childData: ChildrenDataType }) => {
+const childrenDataList: ChildrenDataType[] = [
+  {
+    child: {
+      name: '김서영(11, 여성)',
+      region: '서울특별시 구로구',
+      organization: '은하초등학교 4학년',
+    },
+    description:
+      '베트남계 다문화 가정. 베트남어와 한국어를 모두 구사하며, 국어·영어 성적이 좋음.',
+  },
+  {
+    child: {
+      name: '김기범(16, 남성)',
+      region: '서울특별시 금천구',
+      organization: '혜성중학교 3학년',
+    },
+    description:
+      '저소득층 가정. 사교육을 일체 받지 않아 대부분의 과목 성적이 저조함. 국영수 중심으로 교과 학습 1대1 멘토링이 필요하지만 학습 동기 부여가 낮아적극적인 지도를 필요로 함. 스포츠 체험 활동에 관심이 많음.',
+  },
+];
+
+const Children = () => {
   return (
-    <Container>
-      <Circle />
-      <MainInfo>
-        <Hl2>{childData.child.name}</Hl2>
-        <div className="info">
-          <span>{`[지역] ${childData.child.region}`}</span>
-          <span>{`[소속] ${childData.child.organization}`}</span>
-        </div>
-      </MainInfo>
-      <SubInfo>
-        <span className="sub-title">[특징]</span>
-        <span className="sub-description">{childData.description}</span>
-      </SubInfo>
-    </Container>
+    <MainContainer>
+      <TitleContainer>
+        <Hl1>우리 센터 아동</Hl1>
+      </TitleContainer>
+      <BodyContainer>
+        {childrenDataList.map(childItem => (
+          <Child key={childItem.child.name} childData={childItem} />
+        ))}
+      </BodyContainer>
+    </MainContainer>
   );
 };
 
-const Container = styled.div`
-  background-color: white;
+const MainContainer = styled.div`
+  padding: 0px 112px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 80px;
-  width: 1696px;
-  padding: 32px 95px;
-  border: 2px solid;
-  border-color: var(--color-gray-blue);
-  border-radius: 40px;
-  margin: 20px 0px;
+  margin: 0 auto;
 `;
 
-const Circle = styled.div`
-  width: 195px;
-  height: 195px;
-  border-radius: 50%;
-  background-color: var(--color-sub1);
+const TitleContainer = styled.div`
+  padding-top: 60px;
+  padding-bottom: 15px;
+  width: 1900px;
 `;
 
-const MainInfo = styled.div`
-  color: #333333;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 272px;
-
-  .info {
-    display: flex;
-    flex-direction: column;
-
-    span {
-      font-family: Pretendard;
-      font-size: 26px;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-  }
-`;
-
-const SubInfo = styled.div`
-  font-family: Pretendard;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 1.5;
-  width: 879px;
-  display: flex;
-  flex-direction: column;
+const BodyContainer = styled.div`
+  margin-top: 20px;
+  margin-bottom: 80px;
 `;
 
 export default Children;

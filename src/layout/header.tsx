@@ -24,7 +24,8 @@ const HeaderBox = styled.div`
   /* border: 1px solid gray; */
   /* width: 100%;
   height: 113px; */
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
   height: 120px;
   margin: 0 auto;
   /* margin-top: 10px;

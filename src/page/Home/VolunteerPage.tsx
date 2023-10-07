@@ -3,72 +3,78 @@ import Category from './category';
 
 const VolunteerPage = () => {
   return (
-    <VolContainer>
-      <Category title="모집 중인 자원봉사" />
-      <DataContainer>
-        <DataBox>
-          <DataTag>진로</DataTag>
-          <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
-          <DescriptBox>
-            <p>[모집기관] 동대문구 청소년 상담복지센터</p>
-            <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
-          </DescriptBox>
-          <JoinButton>참여하기</JoinButton>
-        </DataBox>
-        <DataBox>
-          <DataTag>진로</DataTag>
-          <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
-          <DescriptBox>
-            <p>[모집기관] 동대문구 청소년 상담복지센터</p>
-            <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
-          </DescriptBox>
-          <JoinButton>참여하기</JoinButton>
-        </DataBox>{' '}
-        <DataBox>
-          <DataTag>진로</DataTag>
-          <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
-          <DescriptBox>
-            <p>[모집기관] 동대문구 청소년 상담복지센터</p>
-            <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
-          </DescriptBox>
-          <JoinButton>참여하기</JoinButton>
-        </DataBox>{' '}
-        <DataBox>
-          <DataTag>진로</DataTag>
-          <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
-          <DescriptBox>
-            <p>[모집기관] 동대문구 청소년 상담복지센터</p>
-            <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
-          </DescriptBox>
-          <JoinButton>참여하기</JoinButton>
-        </DataBox>
-      </DataContainer>
-    </VolContainer>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <VolContainer>
+        <Category title="모집 중인 자원봉사" />
+        <DataContainer>
+          <DataBox>
+            <DataTag>진로</DataTag>
+            <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
+            <DescriptBox>
+              <p>[모집기관] 동대문구 청소년 상담복지센터</p>
+              <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
+            </DescriptBox>
+            <JoinButton>참여하기</JoinButton>
+          </DataBox>
+          <DataBox>
+            <DataTag>진로</DataTag>
+            <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
+            <DescriptBox>
+              <p>[모집기관] 동대문구 청소년 상담복지센터</p>
+              <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
+            </DescriptBox>
+            <JoinButton>참여하기</JoinButton>
+          </DataBox>{' '}
+          <DataBox>
+            <DataTag>진로</DataTag>
+            <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
+            <DescriptBox>
+              <p>[모집기관] 동대문구 청소년 상담복지센터</p>
+              <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
+            </DescriptBox>
+            <JoinButton>참여하기</JoinButton>
+          </DataBox>{' '}
+          <DataBox>
+            <DataTag>진로</DataTag>
+            <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
+            <DescriptBox>
+              <p>[모집기관] 동대문구 청소년 상담복지센터</p>
+              <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
+            </DescriptBox>
+            <JoinButton>참여하기</JoinButton>
+          </DataBox>
+        </DataContainer>
+      </VolContainer>
+    </div>
   );
 };
 
 const VolContainer = styled.div`
   display: flex;
+  width: 80%;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 100%;
 `;
 
 const DataContainer = styled.div`
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 3fr);
-  width: 1696px;
+  /* width: 1696px; */
+  width: 100%;
   gap: 43px 32px;
   padding: 100px 120px;
+  /* border: 1px solid red; */
+  width: auto;
 `;
 
 const DataBox = styled.div`
   display: flex;
   justify-content: center;
-  width: 544px;
+  /* width: 544px; */
   padding: 32px 10px;
+  height: 434px;
   flex-direction: column;
   align-items: center;
   gap: 10px;

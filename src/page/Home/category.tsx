@@ -57,7 +57,6 @@ const CategoryContainer = styled.div`
   display: flex;
   /* border: 1px solid red; */
   flex-direction: column;
-
   flex-shrink: 0;
 `;
 
@@ -82,13 +81,14 @@ const SecondCategory = styled.div`
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
-  border: 0.4px solid var(--L_Grey, #89939e);
+  /* border-bottom: 0.2px solid var(--L_Grey, #89939e); */
   background: var(--White, #fff);
-
-  display: inline-flex;
+  /* display: inline-flex; */
+  display: flex;
   align-items: center;
   gap: 80px;
   padding: 80px 1381px 80px 140px;
+  /* padding: 80px 0px; */
 `;
 
 const SecondText = styled.div`

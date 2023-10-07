@@ -65,7 +65,7 @@ const MainContainer = styled.div`
   border: 2px solid;
   border-color: var(--color-gray-blue);
   border-radius: 40px;
-  padding: 32px 83px;
+  padding: 50px 83px;
 `;
 
 const Circle = styled.img`

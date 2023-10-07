@@ -17,6 +17,7 @@ export const SubButton = styled.button`
   border-radius: 20px;
   border: none;
   background: var(--color-sub1);
+  color: var(--color-gray1);
 `;
 
 export const CancelButton = styled.button`

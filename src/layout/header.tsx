@@ -56,7 +56,7 @@ const HeaderBox = styled.div`
   height: 113px; */
   /* width: 1920px; */
   width: 100%;
-  height: 160px;
+  height: 200px;
   margin: 0 auto;
   /* margin-top: 10px;
   margin-bottom: 10px; */

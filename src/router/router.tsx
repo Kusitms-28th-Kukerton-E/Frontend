@@ -1,11 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Test from "../page/Test";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from '../page/Home';
 
 export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Test />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

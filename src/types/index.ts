@@ -23,3 +23,26 @@ export interface ArticleDataType {
   createdAt: string;
   updatedAt: string;
 }
+export interface VolunteerType {
+  name: string;
+  image: string;
+  age: number;
+  major: string;
+  place: string;
+  sex: string;
+  school: string;
+}
+
+export interface UserDataType {
+  name: string;
+  age: number;
+  sex: string;
+  place: string;
+  school: string;
+  major: string;
+  vmsId1: string;
+  vmsId2: string;
+  score1: number;
+  score2: number;
+  score3: number;
+}

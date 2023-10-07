@@ -1,22 +1,23 @@
 import styled from 'styled-components';
 import SubTitle from './subTitle';
+import { UserDataType } from '@/types';
 
-const Temperature = () => {
+const Temperature = ({ userData }: { userData: UserDataType }) => {
   return (
     <InfoContainer>
       <SubTitle title="온도" />
       <TempContainer>
         <TempLayout>
-          <TempTitle>hihi</TempTitle>
-          <TempContent>slsl</TempContent>
+          <TempTitle>시간 약속을 잘 지켜요 ⏰</TempTitle>
+          <TempContent>💙{userData.score1}</TempContent>
         </TempLayout>
         <TempLayout>
-          <TempTitle>hihi</TempTitle>
-          <TempContent>slsl</TempContent>
+          <TempTitle>친화력이 좋아요 🎵 </TempTitle>
+          <TempContent>💙{userData.score2}</TempContent>
         </TempLayout>
         <TempLayout>
-          <TempTitle>hihi</TempTitle>
-          <TempContent>slsl</TempContent>
+          <TempTitle>수업 준비가 철저해요 🔥</TempTitle>
+          <TempContent>💙{userData.score3}</TempContent>
         </TempLayout>
       </TempContainer>
     </InfoContainer>
@@ -47,7 +48,7 @@ const TempLayout = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 28px;
-  //
+
   border-radius: 40px;
   border: 3px solid var(--Grey-blue, #abbed1);
   background: var(--White, #fff);
@@ -70,11 +71,10 @@ const TempContent = styled.div`
   padding: 67px 0px 68px 0px;
   justify-content: center;
   align-items: center;
-  //
+
   border-radius: 35px;
   background: var(--Sub-color, #e0eaf3);
 
-  //
   color: #000;
   text-align: center;
   font-family: Pretendard;

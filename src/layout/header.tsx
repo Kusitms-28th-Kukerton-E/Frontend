@@ -62,7 +62,7 @@ const Header = () => {
             >
               <Hl3>로그아웃</Hl3>
             </Button>
-            <Link to="/mypage/kid">
+            <Link to="/mypage/organization">
               <BiSolidUser />
             </Link>
           </div>
@@ -78,7 +78,7 @@ const Header = () => {
             >
               <Hl3>로그아웃</Hl3>
             </Button>
-            <Link to="/mypage/kid">
+            <Link to="/mypage/volunteer">
               <BiSolidUser />
             </Link>
           </div>

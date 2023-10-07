@@ -1,3 +1,4 @@
-export interface Temp {
-  name: string;
+export interface LoginDataType {
+  id: string;
+  password: string;
 }

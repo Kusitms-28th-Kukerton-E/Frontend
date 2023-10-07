@@ -2,30 +2,30 @@ import styled from 'styled-components';
 
 export const Hl1 = styled.div`
   font-family: Pretendard;
-  font-size: 64px;
+  font-size: 54px;
   font-weight: 700;
-  line-height: 76px;
+  line-height: 1.2;
 `;
 
 export const Hl2 = styled.div`
   font-family: Pretendard;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 44px;
+  line-height: 1.2;
 `;
 
 export const Hl3 = styled.div`
   font-family: Pretendard;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
-  line-height: 36px;
+  line-height: 1.2;
 `;
 
 export const Hl4 = styled.div`
   font-family: Pretendard;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.2;
 `;
 
 export const B1 = styled.div`

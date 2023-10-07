@@ -1,8 +1,28 @@
 import { BiSolidLeftArrow, BiSolidRightArrow } from 'react-icons/bi';
 import styled from 'styled-components';
 import SubTitle from './subTitle';
+import { useEffect, useState } from 'react';
+import { ArticleDataType } from '@/types';
+import axios from 'axios';
 
 const History = () => {
+  const [historyData, setHistoryData] = useState<ArticleDataType[]>();
+
+  useEffect(() => {
+    console.log('rendering');
+    const getHistory = async () => {
+      try {
+        const res = await axios.get('https://api.yeongjin.site/api/articles');
+        console.log('res.data:', res.data);
+        setHistoryData(res.data.data);
+        console.log('historyData:', historyData);
+      } catch (err) {
+        console.error('err:', err);
+      }
+    };
+    getHistory();
+  }, []);
+
   return (
     <Container>
       <SubTitle title="내 봉사 내역"></SubTitle>
@@ -19,19 +39,24 @@ const History = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td width="10%">1</td>
-            <td width="10%">2023. 9. 8</td>
-            <td width="30%">초등학생 교과 학습 지도</td>
-            <td width="25%">나눔지역아동센터</td>
-            <td width="10%">2</td>
-            <td width="5%"></td>
-            <td width="10%">
-              <MainButton>
-                <span>리뷰쓰기</span>
-              </MainButton>
-            </td>
-          </tr>
+          {historyData &&
+            historyData.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td width="10%">{item.id}</td>
+                  <td width="10%">{item.createdAt}</td>
+                  <td width="30%">{item.title}</td>
+                  <td width="25%">{item.orga}</td>
+                  <td width="10%">{item.hour}</td>
+                  <td width="5%"></td>
+                  <td width="10%">
+                    <MainButton>
+                      <span>리뷰쓰기</span>
+                    </MainButton>
+                  </td>
+                </tr>
+              );
+            })}
         </tbody>
       </Table>
       <Page>

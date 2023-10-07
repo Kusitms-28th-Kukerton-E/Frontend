@@ -21,6 +21,9 @@ export interface ArticleDataType {
   category: string;
   createdAt: string;
   updatedAt: string;
+  id: string;
+  orga: string;
+  hour: number;
 }
 
 export interface UserDataType {

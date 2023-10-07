@@ -8,7 +8,7 @@
 
 ## ☑️ 배포 주소
 
-- 프론트엔드 배포 주소 :
+- 프론트엔드 배포 주소 : https://kukerton-e.vercel.app
 
 <br/>
 

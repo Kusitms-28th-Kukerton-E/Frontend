@@ -1,15 +1,11 @@
 import { MainButton, SubButton } from '@/components/button';
 import { Hl1, Hl2, Hl4 } from '@/style/common';
+import { LoginDataType } from '@/types';
 import { ChangeEvent, useState } from 'react';
 import styled from 'styled-components';
 
-interface LoginDataProps {
-  id: string;
-  password: string;
-}
-
 const Login = () => {
-  const [loginData, setLoginData] = useState<LoginDataProps>({
+  const [loginData, setLoginData] = useState<LoginDataType>({
     id: '',
     password: '',
   });
@@ -19,12 +15,19 @@ const Login = () => {
     setLoginData({ ...loginData, [name]: value });
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // TODO: 로그인 연동
+    console.log(loginData.id);
+    console.log(loginData.password);
+  };
+
   return (
     <Container>
       <div className="title">
         <Hl1>로그인</Hl1>
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <InputContainer>
           <input
             type="text"
@@ -45,6 +48,7 @@ const Login = () => {
           <Hl2>로그인하기</Hl2>
         </MainButton>
       </form>
+      {/* TODO: 신규 회원가입 버튼 클릭 시 회원가입 화면으로 이동 */}
       <SubButton>
         <Hl2>신규 회원가입</Hl2>
       </SubButton>

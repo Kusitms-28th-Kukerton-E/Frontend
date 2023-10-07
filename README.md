@@ -41,7 +41,7 @@
 <div align=left>
   <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
   <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white">
-  <img src="https://img.shields.io/badge/Google Meet-00897B?style=for-the-badge&logo=googlemeet&logoColor=white">
+  
   </div>
 
 <br/>

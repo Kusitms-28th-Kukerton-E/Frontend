@@ -15,7 +15,7 @@ const ChildMyInfo = ({ userData }: { userData: UserDataType }) => {
             </NameBox>
             <NameBox>
               <InfoButton>성별</InfoButton>
-              <InfoText>{userData.sex}</InfoText>
+              <InfoText>{userData.sex === 'Male' ? '남성' : 'Female'}</InfoText>
             </NameBox>
             <NameBox>
               <InfoButton>나이</InfoButton>

@@ -47,7 +47,7 @@ const Header = () => {
               <Hl3>로그아웃</Hl3>
             </Button>
             <Link to="/mypage/kid">
-              <BiSolidUser style={{ fontSize: '40px' }} />
+              <BiSolidUser style={{ fontSize: '40px', cursor: 'pointer' }} />
             </Link>
           </div>
         )}
@@ -63,7 +63,7 @@ const Header = () => {
               <Hl3>로그아웃</Hl3>
             </Button>
             <Link to="/mypage/organization">
-              <BiSolidUser />
+              <BiSolidUser style={{ fontSize: '40px', cursor: 'pointer' }} />
             </Link>
           </div>
         )}
@@ -79,13 +79,13 @@ const Header = () => {
               <Hl3>로그아웃</Hl3>
             </Button>
             <Link to="/mypage/volunteer">
-              <BiSolidUser />
+              <BiSolidUser style={{ fontSize: '40px', cursor: 'pointer' }} />
             </Link>
           </div>
         )}
         {role === '' && (
           <div className="user-container">
-            <BiSolidUser />
+            <BiSolidUser style={{ color: 'white' }} />
           </div>
         )}
       </TextContent>

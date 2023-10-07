@@ -1,7 +1,5 @@
 // import { UserDataType } from '@/types';
 import { useEffect, useState } from 'react';
-import History from './History';
-import Review from './review';
 import { UserDataType } from '@/types';
 import axios from 'axios';
 import OrgaMyInfo from './OrgaMyInfo';

@@ -7,6 +7,7 @@ export const MainButton = styled.button`
   border-radius: 20px;
   border: none;
   background: var(--color-main2);
+  color: var(--color-white);
 `;
 
 export const SubButton = styled.button`

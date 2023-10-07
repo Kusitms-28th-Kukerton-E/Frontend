@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    zoom: 0.5;
+    zoom: 0.7;
     @font-face {
         font-family: 'Pretendard';
         src: url(${PRETENDARD}) format('woff2');

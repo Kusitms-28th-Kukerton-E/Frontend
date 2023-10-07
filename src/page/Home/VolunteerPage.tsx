@@ -1,7 +1,27 @@
 import styled from 'styled-components';
 import Category from './category';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { ArticleDataType } from '@/types';
 
 const VolunteerPage = ({ title }: { title: string }) => {
+  const [articleData, setArticleData] = useState<ArticleDataType[]>();
+
+  useEffect(() => {
+    console.log('rendering');
+    const getArticle = async () => {
+      try {
+        const res = await axios.get('https://api.yeongjin.site/api/articles');
+        console.log('res.data:', res.data);
+        setArticleData(res.data.data);
+        console.log('article:', articleData);
+      } catch (err) {
+        console.error('err:', err);
+      }
+    };
+    getArticle();
+  }, []);
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <VolContainer>
@@ -20,42 +40,22 @@ const VolunteerPage = ({ title }: { title: string }) => {
 
         <Category />
         <DataContainer>
-          <DataBox>
-            <DataTag>진로</DataTag>
-            <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
-            <DescriptBox>
-              <p>[모집기관] 동대문구 청소년 상담복지센터</p>
-              <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
-            </DescriptBox>
-            <JoinButton>참여하기</JoinButton>
-          </DataBox>
-          <DataBox>
-            <DataTag>진로</DataTag>
-            <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
-            <DescriptBox>
-              <p>[모집기관] 동대문구 청소년 상담복지센터</p>
-              <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
-            </DescriptBox>
-            <JoinButton>참여하기</JoinButton>
-          </DataBox>{' '}
-          <DataBox>
-            <DataTag>진로</DataTag>
-            <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
-            <DescriptBox>
-              <p>[모집기관] 동대문구 청소년 상담복지센터</p>
-              <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
-            </DescriptBox>
-            <JoinButton>참여하기</JoinButton>
-          </DataBox>{' '}
-          <DataBox>
-            <DataTag>진로</DataTag>
-            <DataTitle>청소년 기초학습지도 자원봉사</DataTitle>
-            <DescriptBox>
-              <p>[모집기관] 동대문구 청소년 상담복지센터</p>
-              <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
-            </DescriptBox>
-            <JoinButton>참여하기</JoinButton>
-          </DataBox>
+          <>
+            {articleData &&
+              articleData.map((item, index) => {
+                return (
+                  <DataBox key={index}>
+                    <DataTag>{item.category}</DataTag>
+                    <DataTitle>{item.title}</DataTitle>
+                    <DescriptBox>
+                      <p>[모집기관] 동대문구 청소년 상담복지센터</p>
+                      <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
+                    </DescriptBox>
+                    <JoinButton>참여하기</JoinButton>
+                  </DataBox>
+                );
+              })}
+          </>
         </DataContainer>
       </VolContainer>
     </div>

@@ -47,7 +47,7 @@ const TempLayout = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 28px;
-  //
+
   border-radius: 40px;
   border: 3px solid var(--Grey-blue, #abbed1);
   background: var(--White, #fff);
@@ -70,11 +70,10 @@ const TempContent = styled.div`
   padding: 67px 0px 68px 0px;
   justify-content: center;
   align-items: center;
-  //
+
   border-radius: 35px;
   background: var(--Sub-color, #e0eaf3);
 
-  //
   color: #000;
   text-align: center;
   font-family: Pretendard;

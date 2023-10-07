@@ -1,17 +1,20 @@
 import { LikeButton, MainButton2, SubButton2 } from '@/components/button';
 import { Hl2 } from '@/style/common';
+import { VolunteerType } from '@/types';
 import styled from 'styled-components';
 
-const Volunteer = ({ mode }: { mode: string }) => {
+const Volunteer = ({ mode, item }: { mode: string; item: VolunteerType }) => {
   return (
     <MainContainer>
-      <Circle />
+      <Circle src={item.image} alt={item.image} />
       <LikeButton>💙 20</LikeButton>
       <InfoContainer>
-        <Hl2>조은별(24, 여성)</Hl2>
+        <Hl2>{`${item.name}(${item.age}, ${
+          item.sex === 'Male' ? '남성' : '여성'
+        })`}</Hl2>
         <div className="info">
-          <span>[지역] 서울특별시 서대문구</span>
-          <span>[학교] 연세대학교 경영학과</span>
+          <span>{`[지역] ${item.place}`}</span>
+          <span>{`[학교] ${item.school} ${item.major}`}</span>
         </div>
       </InfoContainer>
       {mode === 'ver1' && <ButtonContainer1 />}
@@ -62,14 +65,13 @@ const MainContainer = styled.div`
   border: 2px solid;
   border-color: var(--color-gray-blue);
   border-radius: 40px;
-  padding: 32px 0px;
+  padding: 32px 83px;
 `;
 
-const Circle = styled.div`
+const Circle = styled.img`
   width: 195px;
   height: 195px;
   border-radius: 50%;
-  background-color: var(--color-sub1);
 `;
 
 const InfoContainer = styled.div`

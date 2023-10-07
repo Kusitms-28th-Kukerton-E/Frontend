@@ -10,6 +10,15 @@ export const MainButton = styled.button`
   color: var(--color-white);
 `;
 
+export const MainButton2 = styled.button`
+  border-radius: 60px;
+  border: none;
+  background: var(--color-main2);
+  color: var(--color-white);
+  padding: 20px 48px;
+  width: 100%;
+`;
+
 export const SubButton = styled.button`
   width: 700px;
   height: 112px;

@@ -3,21 +3,48 @@ import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiSolidUser } from 'react-icons/bi';
 import logo from '@/assets/logo_e.png';
+import { useRecoilState } from 'recoil';
+import { roleState } from '@/state/roleState';
 
 const Header = () => {
+  const [role] = useRecoilState(roleState);
   return (
     <HeaderBox>
       <TextContent>
-        <StyledLink to="/">
-          <img src={logo} alt="logo" />
-        </StyledLink>
+        {role === 'ROLE_Kid' && (
+          <StyledLink to="/main/kid">
+            <img src={logo} alt="logo" />
+          </StyledLink>
+        )}
+        {role === 'ROLE_Organization' && (
+          <StyledLink to="/main/organization">
+            <img src={logo} alt="logo" />
+          </StyledLink>
+        )}
+        {role === 'ROLE_Volunteer' && (
+          <StyledLink to="/main/volunteer">
+            <img src={logo} alt="logo" />
+          </StyledLink>
+        )}
         <InputBox>
           <StyledInput placeholder="키워드를 입력하세요" type="text" />
           <AiOutlineSearch />
         </InputBox>
-        <StyledLink to="/">
-          <BiSolidUser />
-        </StyledLink>
+        {role === 'ROLE_Kid' && (
+          <StyledLink to="/mypage/kid">
+            <BiSolidUser />
+          </StyledLink>
+        )}
+        {role === 'ROLE_Organization' && (
+          <StyledLink to="/mypage/organization">
+            <BiSolidUser />
+          </StyledLink>
+        )}
+        {role === 'ROLE_Volunteer' && (
+          <StyledLink to="/mypage/volunteer">
+            <BiSolidUser />
+          </StyledLink>
+        )}
       </TextContent>
     </HeaderBox>
   );

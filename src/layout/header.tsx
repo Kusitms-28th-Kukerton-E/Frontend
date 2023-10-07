@@ -84,11 +84,9 @@ const Header = () => {
           </div>
         )}
         {role === '' && (
-          <Link to="/mypage/volunteer">
-            <div className="user-container">
-              <BiSolidUser />
-            </div>
-          </Link>
+          <div className="user-container">
+            <BiSolidUser />
+          </div>
         )}
       </TextContent>
     </HeaderBox>

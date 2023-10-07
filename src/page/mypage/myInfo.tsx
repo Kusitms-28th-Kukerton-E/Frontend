@@ -57,7 +57,7 @@ const MyInfo = ({
                 </InfoText>
               </NameBox>
               <NameBox>
-                <InfoButtonBottom>VMS ID</InfoButtonBottom>
+                <InfoButtonBottom>1365 ID</InfoButtonBottom>
                 <InfoText style={{ color: 'black' }}>
                   {userData.vmsId2}
                 </InfoText>
@@ -114,7 +114,7 @@ const InfoBottom = styled.div`
     .vms {
       display: flex;
       flex-direction: row;
-      gap: 400px;
+      gap: 580px;
     }
   }
 `;

@@ -65,7 +65,6 @@ const CategoryTitle = styled.div`
   line-height: 120%; /* 64.8px */
 
   display: flex;
-  width: 1920px;
   height: 200px;
   padding: 100px 1381px 35px 140px;
   align-items: center;

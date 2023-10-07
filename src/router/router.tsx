@@ -17,14 +17,14 @@ export const Router = () => {
           <Route path="/register" element={<Register />} />
 
           <Route
-            path="/main"
+            path="/main/volunteer"
             element={<VolunteerPage title="모집 중인 자원봉사" />}
           />
 
-          <Route path="/main2" element={<Main2 />} />
+          <Route path="/main/organization" element={<Main2 />} />
 
           <Route
-            path="/main/teacher"
+            path="/main/kid"
             element={<Teacher title="나와 함께할 선생님 살펴보기" />}
           />
         </Route>

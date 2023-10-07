@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 import SubTitle from './subTitle';
 
-const ChildReview = () => {
+const ChildReview = ({
+  configButton,
+  text1,
+  text2,
+}: {
+  configButton: string;
+  text1: string;
+  text2: string;
+}) => {
   return (
     <InfoContainer>
       {' '}
-      <SubTitle title="아동 리뷰" />
+      <SubTitle title="아동 리뷰 보기" />
       <ChildBox>
         <LeftText>
-          <div>선생님, 편지가 도착했어요!</div>
-          <p>함께했던 아이들이 보낸 소중한 메시지를 확인해 보세요.</p>
+          <div>{text1}</div>
+          <p>{text2}</p>
         </LeftText>
-        <RightText>확인하기</RightText>
+        <RightText>{configButton}</RightText>
       </ChildBox>
     </InfoContainer>
   );
@@ -33,7 +41,7 @@ const ChildBox = styled.div`
 
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 100px;
 `;
 

@@ -6,6 +6,7 @@ import Temperature from './temperature';
 import { UserDataType } from '@/types';
 import axios from 'axios';
 import styled from 'styled-components';
+import ChildReview from './childReview';
 
 const VolunteerMyPage = () => {
   const [userData, setUserData] = useState<UserDataType>();
@@ -33,6 +34,11 @@ const VolunteerMyPage = () => {
 
       <History />
       <Review />
+      <ChildReview
+        text1="선생님, 편지가 도착했어요!"
+        text2="함께했던 아이들이 보낸 소중한 메시지를 확인해 보세요."
+        configButton="확인하기"
+      />
     </Container>
   );
 };

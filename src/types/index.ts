@@ -25,6 +25,9 @@ export interface ArticleDataType {
   id: string;
   orga: string;
   hour: number;
+  people: string;
+  st: string;
+  teacher: string;
 }
 export interface VolunteerType {
   name: string;
@@ -48,4 +51,8 @@ export interface UserDataType {
   score1: number;
   score2: number;
   score3: number;
+  //organization
+  address: string;
+  activity: string;
+  id: number;
 }

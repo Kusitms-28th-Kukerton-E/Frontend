@@ -38,7 +38,11 @@ const Main2 = () => {
       <VolListContainer>
         {volunteerList &&
           volunteerList.map(item => (
-            <Volunteer mode={ing ? 'ver1' : 'ver2'} item={item} />
+            <Volunteer
+              mode={ing ? 'ver1' : 'ver2'}
+              item={item}
+              key={item.image}
+            />
           ))}
       </VolListContainer>
     </div>

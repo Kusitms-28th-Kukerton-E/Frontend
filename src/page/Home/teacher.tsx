@@ -31,7 +31,9 @@ const Teacher = ({ title }: { title: string }) => {
       </VolContainer>
       <VolListContainer>
         {volunteerList &&
-          volunteerList.map(item => <Volunteer mode="ver3" item={item} />)}
+          volunteerList.map(item => (
+            <Volunteer mode="ver3" item={item} key={item.image} />
+          ))}
       </VolListContainer>
     </div>
   );

@@ -52,7 +52,7 @@ const OrgaHistory = () => {
                   <td width="5%"></td>
                   <td width="10%">
                     <MainButton>
-                      <span>리뷰쓰기</span>
+                      <span>상세보기</span>
                     </MainButton>
                   </td>
                 </tr>

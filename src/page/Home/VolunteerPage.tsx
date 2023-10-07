@@ -49,7 +49,7 @@ const VolunteerPage = ({ title }: { title: string }) => {
                     <DataTitle>{item.title}</DataTitle>
                     <DescriptBox>
                       <p>[모집기관] 동대문구 청소년 상담복지센터</p>
-                      <p>[봉사기간] 2023-10-11 ~ 2023-11-11</p>
+                      <p>[봉사기간] {item.createdAt} ~ 2023-11-11</p>
                     </DescriptBox>
                     <JoinButton>참여하기</JoinButton>
                   </DataBox>

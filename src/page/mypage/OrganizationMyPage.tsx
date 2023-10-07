@@ -29,7 +29,14 @@ const OrganizationMyPage = () => {
   return (
     <Container>
       {userData && <OrgaMyInfo userData={userData} />}
-      {userData && <Temperature userData={userData} />}
+      {userData && (
+        <Temperature
+          userData={userData}
+          score1="사전 안내가 충분해요 👍"
+          score2="프로그램 구성이 체계적이에요 📚 "
+          score3="담당자분이 친절해요 😀 "
+        />
+      )}
       <OrgaHistory />
     </Container>
   );

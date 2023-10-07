@@ -162,8 +162,10 @@ const DataBox = styled.div`
 `;
 
 const DataTag = styled.div`
+  /* position: relative; */
+  /* left: 0; */
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   border-radius: 40px;
   border: 1px solid var(--Sub-color, #e0eaf3);
   //color: var(--Main-color2, #498dfd);

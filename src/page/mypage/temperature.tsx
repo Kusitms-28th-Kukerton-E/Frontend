@@ -2,21 +2,31 @@ import styled from 'styled-components';
 import SubTitle from './subTitle';
 import { UserDataType } from '@/types';
 
-const Temperature = ({ userData }: { userData: UserDataType }) => {
+const Temperature = ({
+  userData,
+  score1,
+  score2,
+  score3,
+}: {
+  userData: UserDataType;
+  score1: string;
+  score2: string;
+  score3: string;
+}) => {
   return (
     <InfoContainer>
       <SubTitle title="온도" />
       <TempContainer>
         <TempLayout>
-          <TempTitle>시간 약속을 잘 지켜요 ⏰</TempTitle>
+          <TempTitle>{score1}</TempTitle>
           <TempContent>💙{userData.score1}</TempContent>
         </TempLayout>
         <TempLayout>
-          <TempTitle>친화력이 좋아요 🎵 </TempTitle>
+          <TempTitle>{score2}</TempTitle>
           <TempContent>💙{userData.score2}</TempContent>
         </TempLayout>
         <TempLayout>
-          <TempTitle>수업 준비가 철저해요 🔥</TempTitle>
+          <TempTitle>{score3}</TempTitle>
           <TempContent>💙{userData.score3}</TempContent>
         </TempLayout>
       </TempContainer>

@@ -30,7 +30,14 @@ const VolunteerMyPage = () => {
   return (
     <Container>
       {userData && <MyInfo userData={userData} title="내 정보" />}
-      {userData && <Temperature userData={userData} />}
+      {userData && (
+        <Temperature
+          userData={userData}
+          score1="시간 약속을 잘 지켜요 ⏰"
+          score2="친화력이 좋아요 🎵 "
+          score3="수업 준비가 철저해요 🔥"
+        />
+      )}
 
       <History />
       <Review />

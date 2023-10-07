@@ -6,7 +6,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import VolunteerPage from '@/page/Home/VolunteerPage';
 import Main2 from '@/page/Home/main2';
 import Teacher from '@/page/Home/teacher';
-import MyPage from '@/page/mypage';
+import VolunteerMyPage from '@/page/mypage/VolunteerMyPage';
+import OrganizationMyPage from '@/page/mypage/OrganizationMyPage';
+import KidMyPage from '@/page/mypage/KidMyPage';
 
 export const Router = () => {
   return (
@@ -29,7 +31,9 @@ export const Router = () => {
             element={<Teacher title="나와 함께할 선생님 살펴보기" />}
           />
 
-          <Route path="/mypage" element={<MyPage />} />
+          <Route path="/mypage/volunteer" element={<VolunteerMyPage />} />
+          <Route path="/mypage/organization" element={<OrganizationMyPage />} />
+          <Route path="/mypage/kid" element={<KidMyPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

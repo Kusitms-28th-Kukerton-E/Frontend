@@ -1,15 +1,15 @@
-import MyInfo from './myInfo';
+import History from './History';
 import Review from './review';
 import Temperature from './temperature';
 
-const MyPage = () => {
+const OrganizationMyPage = () => {
   return (
     <>
-      <MyInfo />
       <Temperature />
       <Review />
+      <History />
     </>
   );
 };
 
-export default MyPage;
+export default OrganizationMyPage;

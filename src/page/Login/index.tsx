@@ -2,6 +2,7 @@ import { MainButton, SubButton } from '@/components/button';
 import { Hl1, Hl2, Hl4 } from '@/style/common';
 import { LoginDataType } from '@/types';
 import { ChangeEvent, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Login = () => {
@@ -49,9 +50,11 @@ const Login = () => {
         </MainButton>
       </form>
       {/* TODO: 신규 회원가입 버튼 클릭 시 회원가입 화면으로 이동 */}
-      <SubButton>
-        <Hl2>신규 회원가입</Hl2>
-      </SubButton>
+      <Link to="/register">
+        <SubButton>
+          <Hl2>신규 회원가입</Hl2>
+        </SubButton>
+      </Link>
       <FindButtonContainer>
         <Hl4>
           <span>아이디 찾기</span>

@@ -10,6 +10,8 @@ const Main2 = () => {
   const handleGetVolunteerList = async () => {
     getVolunteerList().then(data => setVolunteerList(data.data.data));
   };
+  const [ing, setIng] = useState(false);
+  const [end, setEnd] = useState(false);
 
   useEffect(() => {
     handleGetVolunteerList();
@@ -25,11 +27,19 @@ const Main2 = () => {
     >
       <VolContainer>
         {' '}
-        <TopCate title="공고에 올린 자원봉사" />
+        <TopCate
+          title="공고에 올린 자원봉사"
+          ing={ing}
+          setIng={setIng}
+          end={end}
+          setEnd={setEnd}
+        />
       </VolContainer>
       <VolListContainer>
         {volunteerList &&
-          volunteerList.map(item => <Volunteer mode="ver1" item={item} />)}
+          volunteerList.map(item => (
+            <Volunteer mode={ing ? 'ver1' : 'ver2'} item={item} />
+          ))}
       </VolListContainer>
     </div>
   );

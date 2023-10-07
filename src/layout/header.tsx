@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiSolidUser } from 'react-icons/bi';
-import logo from '@/assets/logo_e.png';
+import logo from '@/assets/로고.png';
 
 const Header = () => {
   return (
@@ -67,7 +67,12 @@ const TextContent = styled.li`
   line-height: normal;
 `;
 
-const StyledLink = styled(Link)``;
+const StyledLink = styled(Link)`
+  img {
+    width: 160px;
+    height: 67.75px;
+  }
+`;
 
 // const SubStyledLink = styled(Link)`
 //   text-decoration: none;

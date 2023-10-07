@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Category from './category';
-import Volunteer from './Volunteer';
 
 const VolunteerPage = () => {
   return (
@@ -44,7 +43,6 @@ const VolunteerPage = () => {
           <JoinButton>참여하기</JoinButton>
         </DataBox>
       </DataContainer>
-      <Volunteer mode="ver3" />
     </VolContainer>
   );
 };

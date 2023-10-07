@@ -4,6 +4,7 @@ import OrganizationPage from '@/page/Home/Organization';
 import Login from '@/page/Login';
 import Register from '@/page/Register';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import VolunteerPage from '@/page/Home/VolunteerPage';
 
 export const Router = () => {
   return (
@@ -14,6 +15,7 @@ export const Router = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/main/organization" element={<OrganizationPage />} />
+          <Route path="/main/volunteer" element={<VolunteerPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

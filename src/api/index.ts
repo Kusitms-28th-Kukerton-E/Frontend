@@ -9,3 +9,9 @@ export const login = async (loginData: LoginDataType) => {
   });
   return response;
 };
+
+// 봉사자 명단
+export const getVolunteerList = async () => {
+  const response = client.get('/api/volunteer');
+  return response;
+};

@@ -116,7 +116,6 @@ const InfoButton = styled.div`
   border-radius: 30px;
   background: var(--White, #fff);
 
-  //
   color: var(--Black, #263238);
   font-feature-settings:
     'clig' off,
@@ -138,7 +137,7 @@ const InfoButtonBottom = styled.div`
   color: black;
   border-radius: 30px;
   background: var(--Grey-blue, #abbed1);
-  //
+
   color: var(--Black, #263238);
   font-feature-settings:
     'clig' off,

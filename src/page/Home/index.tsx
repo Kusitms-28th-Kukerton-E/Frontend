@@ -1,5 +1,11 @@
+import History from '../mypage/History';
+
 const Home = () => {
-  return <div>Homedd</div>;
+  return (
+    <div>
+      <History />
+    </div>
+  );
 };
 
 export default Home;

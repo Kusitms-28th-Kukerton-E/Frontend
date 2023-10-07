@@ -6,7 +6,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import VolunteerPage from '@/page/Home/VolunteerPage';
 import Main2 from '@/page/Home/main2';
 import Teacher from '@/page/Home/teacher';
-import VolunteerMyPage from '@/page/mypage/index';
+import VolunteerMyPage from '@/page/mypage/VolunteerMyPage';
+import OrganizationMyPage from '@/page/mypage/OrganizationMyPage';
+import KidMyPage from '@/page/mypage/KidMyPage';
 
 export const Router = () => {
   return (
@@ -30,6 +32,8 @@ export const Router = () => {
           />
 
           <Route path="/mypage/volunteer" element={<VolunteerMyPage />} />
+          <Route path="/mypage/organization" element={<OrganizationMyPage />} />
+          <Route path="/mypage/kid" element={<KidMyPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

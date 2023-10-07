@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import History from './History';
 import MyInfo from './myInfo';
 import Review from './review';
 import Temperature from './temperature';
@@ -28,6 +29,8 @@ const VolunteerMyPage = () => {
     <>
       {userData && <MyInfo userData={userData} />}
       {userData && <Temperature userData={userData} />}
+
+      <History />
       <Review />
     </>
   );

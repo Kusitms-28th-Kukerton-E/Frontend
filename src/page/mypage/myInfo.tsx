@@ -2,16 +2,16 @@ import styled from 'styled-components';
 import SubTitle from './subTitle';
 
 const MyInfo = () => {
-  const myTopInfo = [
-    {
-      name: '김준석',
-      gender: '남성',
-      age: '25',
-      place: 'seoul',
-      univ: 'ajou',
-      major: 'eng',
-    },
-  ];
+  //   const myTopInfo = [
+  //     {
+  //       name: '김준석',
+  //       gender: '남성',
+  //       age: '25',
+  //       place: 'seoul',
+  //       univ: 'ajou',
+  //       major: 'eng',
+  //     },
+  //   ];
   return (
     <InfoContainer>
       <SubTitle title="내 정보"></SubTitle>

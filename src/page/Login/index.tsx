@@ -114,6 +114,7 @@ const FindButtonContainer = styled.div`
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 5px;
+    cursor: pointer;
   }
 `;
 

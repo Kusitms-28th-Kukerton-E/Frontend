@@ -61,4 +61,10 @@ a{
 button{
     cursor: pointer;
 }
+
+input{
+    &:focus {
+        outline: none;
+    }
+}
 `;

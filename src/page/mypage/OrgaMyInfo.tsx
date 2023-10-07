@@ -10,20 +10,17 @@ const OrgaMyInfo = ({ userData }: { userData: UserDataType }) => {
         <InfoTop>
           <InfoSmall>
             <NameBox>
-              <InfoButton>이름</InfoButton>
+              <InfoButton>기관명</InfoButton>
               <InfoText>{userData.name}</InfoText>
             </NameBox>
             <NameBox>
-              <InfoButton>성별</InfoButton>
-              <InfoText>{userData.sex}</InfoText>
+              <InfoButton>기관 위치</InfoButton>
+              <InfoText>{userData.address}</InfoText>
             </NameBox>
+
             <NameBox>
-              <InfoButton>나이</InfoButton>
-              <InfoText>{userData.age}</InfoText>
-            </NameBox>
-            <NameBox>
-              <InfoButton>지역</InfoButton>
-              <InfoText>{userData.place}</InfoText>
+              <InfoButton>주요 활동 내용</InfoButton>
+              <InfoText>{userData.activity}</InfoText>
             </NameBox>
           </InfoSmall>
         </InfoTop>
@@ -62,12 +59,12 @@ const InfoSmall = styled.div`
   /* justify-items: center; */
   grid-template-columns: repeat(3, 3fr);
   width: 100%;
-  gap: 43px 32px;
+  /* gap: 43px 32px; */
   /* padding: 20px; */
 `;
 
 const InfoButton = styled.div`
-  width: 100px;
+  width: 180px;
   height: 50px;
   flex-shrink: 0;
   display: flex;
@@ -90,14 +87,15 @@ const InfoButton = styled.div`
 
 const NameBox = styled.div`
   display: flex;
+  flex-direction: row;
   gap: 23px;
   align-items: center;
 `;
 
 const InfoText = styled.div`
+  display: flex;
   color: var(--White, #fff);
   text-align: center;
-
   /* Headline 3 */
   font-family: Pretendard;
   font-size: 32px;

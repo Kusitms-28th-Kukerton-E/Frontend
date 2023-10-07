@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { UserDataType } from '@/types';
 import axios from 'axios';
 import OrgaMyInfo from './OrgaMyInfo';
+import styled from 'styled-components';
 import Temperature from './temperature';
 import OrgaHistory from './OrgaHistory';
 // import Temperature from './temperature';
@@ -26,12 +27,15 @@ const OrganizationMyPage = () => {
   }, []);
 
   return (
-    <>
+    <Container>
       {userData && <OrgaMyInfo userData={userData} />}
       {userData && <Temperature userData={userData} />}
       <OrgaHistory />
-    </>
+    </Container>
   );
 };
 
+const Container = styled.div`
+  padding-bottom: 100px;
+`;
 export default OrganizationMyPage;

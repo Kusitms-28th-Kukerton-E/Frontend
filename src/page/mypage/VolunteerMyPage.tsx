@@ -5,6 +5,7 @@ import Review from './review';
 import Temperature from './temperature';
 import { UserDataType } from '@/types';
 import axios from 'axios';
+import styled from 'styled-components';
 import ChildReview from './childReview';
 
 const VolunteerMyPage = () => {
@@ -27,8 +28,8 @@ const VolunteerMyPage = () => {
   }, []);
 
   return (
-    <>
-      {userData && <MyInfo userData={userData} />}
+    <Container>
+      {userData && <MyInfo userData={userData} title="내 정보" />}
       {userData && <Temperature userData={userData} />}
 
       <History />
@@ -38,8 +39,12 @@ const VolunteerMyPage = () => {
         text2="함께했던 아이들이 보낸 소중한 메시지를 확인해 보세요."
         configButton="확인하기"
       />
-    </>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  padding-bottom: 100px 0px;
+`;
 
 export default VolunteerMyPage;

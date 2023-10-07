@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import MyInfo from './myInfo';
-import Review from './review';
-import Temperature from './temperature';
-import { UserDataType } from '@/types';
+import MyInfo from '../mypage/myInfo';
+import Temperature from './Temperature';
 import axios from 'axios';
+import { UserDataType } from '@/types';
+import styled from 'styled-components';
 
-const VolunteerMyPage = () => {
+const Write = () => {
   const [userData, setUserData] = useState<UserDataType>();
 
   useEffect(() => {
@@ -25,12 +25,15 @@ const VolunteerMyPage = () => {
   }, []);
 
   return (
-    <>
-      {userData && <MyInfo userData={userData} title="내 정보" />}
-      {userData && <Temperature userData={userData} />}
-      <Review />
-    </>
+    <Container>
+      {userData && <MyInfo userData={userData} title="봉사자 정보" />}
+      <Temperature />
+    </Container>
   );
 };
 
-export default VolunteerMyPage;
+const Container = styled.div`
+  padding-bottom: 100px;
+`;
+
+export default Write;

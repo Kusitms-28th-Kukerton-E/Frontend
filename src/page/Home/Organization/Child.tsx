@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Child = ({ childData }: { childData: ChildrenDataType }) => {
   return (
     <Container>
-      <Circle />
+      <Circle alt={childData.child.image} src={childData.child.image} />
       <MainInfo>
         <Hl2>{childData.child.name}</Hl2>
         <div className="info">
@@ -35,11 +35,8 @@ const Container = styled.div`
   margin: 20px 0px;
 `;
 
-const Circle = styled.div`
+const Circle = styled.img`
   width: 195px;
-  height: 195px;
-  border-radius: 50%;
-  background-color: var(--color-sub1);
 `;
 
 const MainInfo = styled.div`

@@ -1,12 +1,18 @@
-import { useState } from 'react';
 import styled from 'styled-components';
-import TestA from './main2/test';
-import TestB from './main2/testb';
 
-const TopCate = ({ title }: { title: string }) => {
-  const [ing, setIng] = useState(false);
-  const [end, setEnd] = useState(false);
-
+const TopCate = ({
+  title,
+  ing,
+  setIng,
+  end,
+  setEnd,
+}: {
+  title: string;
+  ing: boolean;
+  setIng: (tf: boolean) => void;
+  end: boolean;
+  setEnd: (tf: boolean) => void;
+}) => {
   const handleIng = () => {
     setIng(true);
     setEnd(false);
@@ -23,17 +29,19 @@ const TopCate = ({ title }: { title: string }) => {
       <CategoryTitle>{title}</CategoryTitle>
       <SecondCategory>
         {/* <SecondText style={{ color: 'var(--color-main2)' }}>모집중</SecondText> */}
-        <SecondText onClick={handleIng}>모집중</SecondText>
-        <SecondText>모집완료</SecondText>
+        <SecondText onClick={handleIng} $active={ing}>
+          모집중
+        </SecondText>
+        <SecondText $active={false}>모집완료</SecondText>
 
-        <SecondText onClick={handleEnd}>활동 종료</SecondText>
+        <SecondText onClick={handleEnd} $active={end}>
+          활동 종료
+        </SecondText>
       </SecondCategory>
       <SubBanner>
         <p>청소년 기초학습지도 자원봉사 </p>
         <p>▽</p>
       </SubBanner>
-      {ing && <TestA />}
-      {end && <TestB />}
     </CategoryContainer>
   );
 };
@@ -100,8 +108,8 @@ const SecondCategory = styled.div`
   padding: 80px 10px;
 `;
 
-const SecondText = styled.div`
-  color: var(--Grey, #717171);
+const SecondText = styled.div<{ $active: boolean }>`
+  color: ${props => (props.$active ? '#498DFD' : 'var(--Grey, #717171);')};
   text-align: center;
   font-family: Pretendard;
   font-size: 40px;

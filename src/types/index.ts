@@ -22,6 +22,15 @@ export interface ArticleDataType {
   createdAt: string;
   updatedAt: string;
 }
+export interface VolunteerType {
+  name: string;
+  image: string;
+  age: number;
+  major: string;
+  place: string;
+  sex: string;
+  school: string;
+}
 
 export interface UserDataType {
   name: string;

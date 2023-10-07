@@ -2,6 +2,7 @@
   /* neutral */
   --color-black: #263238;
   --color-gray1: #4d4d4d;
+
   --color-gray2: #717171;
   --color-gray3: #89939e;
   --color-gray-blue: #abbed1;
@@ -9,14 +10,22 @@
 
   /* primary */
 
-  --color-primary1: #5236ff;
-  --color-primary2: #242331;
+  /* --color-primary1: #5236ff;
+  --color-primary2: #242331; */
 
   /* color shade */
-
+  /* 
   --color-shade1: #103e13;
   --color-shade2: #1b5e1f;
   --color-shade3: #237d31;
   --color-shade4: #388e3b;
-  --color-shade5: #43a046;
+  --color-shade5: #43a046; */
+
+  --color-main1: #6495ed;
+  --color-main2: #498dfd;
+
+  --color-sub1: #e0eaf3;
+  --color-sub2: #ffcc1f;
+  --color-sub3: #41bc7b;
+  --color-sub4: #ff5555;
 }

@@ -2,10 +2,16 @@ import styled from 'styled-components';
 import SubTitle from './subTitle';
 import { UserDataType } from '@/types';
 
-const MyInfo = ({ userData }: { userData: UserDataType }) => {
+const MyInfo = ({
+  userData,
+  title,
+}: {
+  userData: UserDataType;
+  title: string;
+}) => {
   return (
     <InfoContainer>
-      <SubTitle title="내 정보"></SubTitle>
+      <SubTitle title={title}></SubTitle>
       <InfoBox>
         <InfoTop>
           <InfoSmall>
@@ -15,7 +21,7 @@ const MyInfo = ({ userData }: { userData: UserDataType }) => {
             </NameBox>
             <NameBox>
               <InfoButton>성별</InfoButton>
-              <InfoText>{userData.sex}</InfoText>
+              <InfoText>{userData.sex === 'Male' ? '남성' : '여성'}</InfoText>
             </NameBox>
             <NameBox>
               <InfoButton>나이</InfoButton>
@@ -36,22 +42,28 @@ const MyInfo = ({ userData }: { userData: UserDataType }) => {
           </InfoSmall>
         </InfoTop>
         <InfoBottom>
-          <InfoSmall>
+          <div className="info-container">
             <NameBox>
               <InfoButtonBottom>관심 과목</InfoButtonBottom>
               <InfoTextBottom>수학</InfoTextBottom>
               <InfoTextBottom>국어</InfoTextBottom>
               <InfoTextBottom>체육</InfoTextBottom>
             </NameBox>
-            <NameBox>
-              <InfoButtonBottom>VMS ID</InfoButtonBottom>
-              <InfoText style={{ color: 'black' }}>{userData.vmsId1}</InfoText>
-            </NameBox>
-            <NameBox>
-              <InfoButtonBottom>VMS ID</InfoButtonBottom>
-              <InfoText style={{ color: 'black' }}>{userData.vmsId2}</InfoText>
-            </NameBox>
-          </InfoSmall>
+            <div className="vms">
+              <NameBox>
+                <InfoButtonBottom>VMS ID</InfoButtonBottom>
+                <InfoText style={{ color: 'black' }}>
+                  {userData.vmsId1}
+                </InfoText>
+              </NameBox>
+              <NameBox>
+                <InfoButtonBottom>VMS ID</InfoButtonBottom>
+                <InfoText style={{ color: 'black' }}>
+                  {userData.vmsId2}
+                </InfoText>
+              </NameBox>
+            </div>
+          </div>
         </InfoBottom>
       </InfoBox>
     </InfoContainer>
@@ -93,6 +105,18 @@ const InfoBottom = styled.div`
 
   border: 5px solid var(--Main-color2, #498dfd);
   background: var(--White, #fff);
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .vms {
+      display: flex;
+      flex-direction: row;
+      gap: 400px;
+    }
+  }
 `;
 
 const InfoSmall = styled.div`

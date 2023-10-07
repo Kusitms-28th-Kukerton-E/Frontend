@@ -27,7 +27,7 @@ const VolunteerMyPage = () => {
 
   return (
     <>
-      {userData && <MyInfo userData={userData} />}
+      {userData && <MyInfo userData={userData} title="내 정보" />}
       {userData && <Temperature userData={userData} />}
 
       <History />

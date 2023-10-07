@@ -11,7 +11,7 @@ const Main2 = () => {
   const handleGetVolunteerList = async () => {
     getVolunteerList().then(data => setVolunteerList(data.data.data));
   };
-  const [ing, setIng] = useState(false);
+  const [ing, setIng] = useState(true);
   const [end, setEnd] = useState(false);
 
   useEffect(() => {

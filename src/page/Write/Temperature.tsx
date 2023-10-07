@@ -18,7 +18,7 @@ const Temperature = () => {
       <SubTitle title="온도" />
       <ButtonContainer>
         {tempList.map(temp => (
-          <Button>{temp}</Button>
+          <Button key={temp}>{temp}</Button>
         ))}
       </ButtonContainer>
     </Container>
@@ -28,6 +28,7 @@ const Temperature = () => {
 const Container = styled.div`
   width: 80%;
   margin: 0 auto;
+  padding: 100px 0px;
 `;
 
 const ButtonContainer = styled.div`
@@ -42,7 +43,7 @@ const Button = styled.button`
   font-weight: 600;
   font-size: 32px;
   line-height: 1.2;
-  padding: 29px 54px;
+  padding: 29px 50px;
   background-color: var(--color-white);
   border: 3px solid;
   border-color: var(--color-gray-blue);
